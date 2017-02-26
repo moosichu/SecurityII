@@ -3,8 +3,7 @@
 def modinv(a0, n0):
     """ Moduluar inverse algorithm """
     (a, b) = (a0, n0)
-    (aa, ab) = (1, 0)
-    (ba, bb) = (0, 1)
+    (aa, ba) = (1, 0)
     while True:
         q = a // b
         if a == (b * q):
@@ -15,10 +14,9 @@ def modinv(a0, n0):
                 if(ba < 0):
                     ba += n0
                 print("modinv({}, {}) = {}".format(a0, n0, ba))
-
-                return bb
+                return ba
         (a, b) = (b, a - (b * q))
-        (aa, ab, ba, bb) = (ba, bb, aa - (q * ba), ab - (q * bb))
+        (aa, ba) = (ba, aa - (q * ba))
 
 def main():
     """ The main method """
