@@ -10,9 +10,13 @@ def genpasswd(password):
     return hashstring[:6]
 
 
-def findcollision():
+def findcollision(seed):
     """ Finds two input passwords which give the same output from genpasswd """
-    pass
+    (x1, x2) = (genpasswd(seed), genpasswd(gennpasswd(seed)))
+    i = 1
+    while x1 != x2:
+        pass
+
 
 
 def main():
