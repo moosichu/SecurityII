@@ -1,7 +1,7 @@
-""" Euclids algorithm """
+""" Euclid's algorithm """
 
 def modinv(a0, n0):
-    """ Moduluar inverse algorithm """
+    """ Modular inverse algorithm """
     (a, b) = (a0, n0)
     (aa, ba) = (1, 0)
     while True:
